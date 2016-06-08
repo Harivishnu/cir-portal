@@ -66,9 +66,12 @@ class StudentRegistrationView( LoginRequiredMixin, FormView):
     form_class = StudentRegistrationForm
     success_url = '/register/cirstaff/success'
 
+
     def form_valid(self, form):
+        form.instance.aums_id = form.instance.aums_id.lower()
         form.save()
         return FormView.form_valid(self, form)
+
 
 class StudentBulkUploadView( LoginRequiredMixin, FormView):
     template_name = "register/cirstaff/register_bulk_student.html"
@@ -105,12 +108,12 @@ class StudentListView(LoginRequiredMixin,ListView):
 
 class StudentListUpdateView(LoginRequiredMixin, UpdateView):
     model = Student
-    form_class = StudentRegistrationForm
+    fields = student_fields
     template_name_suffix = '_update_form'
     success_url = '/register/cirstaff/success/'
 
     def get_object(self, queryset=None):
-        obj = Student.Objects.get(stud_id=self.kwargs['stud_id'])
+        obj = Student.Objects.get(aums_id=self.kwargs['aums_id'])
         if obj:
             return obj
         else:
