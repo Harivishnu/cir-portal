@@ -14,7 +14,7 @@ user_widgets = {
     'email'         : forms.TextInput(attrs={'placeholder':_('Your Email address'),
                                              'required': True}),
     'aums_id'       : forms.TextInput(attrs={'placeholder':_('Your AUMS ID'),
-                                             'required': True}),  
+                                             'required': True}),
 }
 
 
@@ -71,9 +71,3 @@ class StudentRegistrationForm(ModelForm):
     class Meta:
         model = Student
         fields = ['aums_id'] + student_fields
-
-
-
-
-
-

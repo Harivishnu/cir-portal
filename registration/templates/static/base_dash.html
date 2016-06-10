@@ -96,23 +96,40 @@
                         <li><a href="{% url 'register_student' %}">Add a Student</a></li>
                         <li><a href="{% url 'register_student_bulk' %}">Bulk Upload</a></li>
                         <li><a href="{% url 'list' %}">List Students</a></li>
-                        </ul>
+                    </ul>
                 </li>
 
-                        <li class="sub open">
-                            <a href="javascript:;">
-                                <i class="fa fa-database"></i> Filter <div class="pull-right"><span class="caret"></span></div>
-                            </a>
-                            <ul class="templatemo-submenu">
-                                <li><a href="{% url 'filter_internal' %}">Internal Filter</a></li>
-                                <li><a href="{% url 'filter_external' %}">External Filter</a></li>
+                <li class="sub open">
+                    <a href="javascript:;">
+                        <i class="fa fa-database"></i> Filter <div class="pull-right"><span class="caret"></span></div>
+                    </a>
+                    <ul class="templatemo-submenu">
+                        <li><a href="{% url 'filter_internal' %}">Internal Filter</a></li>
+                        <li><a href="{% url 'filter_external' %}">External Filter</a></li>
 
-                            </ul>
-                        </li>
-
-                        <li><a href="{% url 'preferences' %}"><i class="fa fa-cog"></i>Preferences</a></li>
-                        <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i>Sign Out</a></li>
                     </ul>
+
+                <li class="sub open">
+                    <a href="javascript:;">
+                        <i class="fa fa-database"></i> Test <div class="pull-right"><span class="caret"></span></div>
+                    </a>
+                    <ul class="templatemo-submenu">
+                        <li><a href="{% url 'technical_test' %}">Technical Test</a></li>
+                        <li><a href="{% url 'technical_test' %}">Quantitative Test</a></li>
+                        <li><a href="{% url 'filter_external' %}">Verbals Test</a></li>
+                        <li><a href="{% url 'filter_external' %}">HR Test</a></li>
+                        <li><a href="{% url 'filter_external' %}">Reasoning Test</a></li>
+                        <li><a href="{% url 'filter_external' %}">Eligibility Test</a></li>
+
+                    </ul>
+                </li>  </li>
+
+
+
+
+                <li><a href="{% url 'preferences' %}"><i class="fa fa-cog"></i>Preferences</a></li>
+                <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+            </ul>
         </div><!--/.navbar-collapse -->
 
     </div>
